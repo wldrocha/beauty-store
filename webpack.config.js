@@ -7,11 +7,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/',
   },
   mode: 'development',
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -19,36 +19,40 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader'
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.(css|scss)$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg)$/,
+        type: 'asset',
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: './index.html'
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
+      filename: '[name].css',
+    }),
   ],
   devServer: {
     historyApiFallback: true,
     // contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3001,
-  }
+  },
 }
