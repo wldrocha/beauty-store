@@ -23,9 +23,7 @@
   },
   "homepage": "https://github.com/wldrocha/beauty-store#readme",
   "dependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
+    "axios": "^0.26.1",
     "babel-loader": "^8.2.4",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
@@ -37,6 +35,10 @@
     "webpack-dev-server": "^4.8.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
     "css-loader": "^6.7.1",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.49.11",
