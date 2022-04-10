@@ -10,13 +10,9 @@ const ProductItem = ({
     images: { 0: image },
   },
 }) => {
-  console.log(title)
   return (
     <div className="ProductItem">
-      <img
-        src={image}
-        alt=""
-      />
+      <img src={image} alt="" />
       <div className="product-info">
         <div>
           <p>$ {price}</p>
