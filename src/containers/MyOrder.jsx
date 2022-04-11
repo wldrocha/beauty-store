@@ -16,12 +16,14 @@ const MyOrder = () => {
 
   return (
     <aside className="MyOrder">
-      {cartItems.map((product, indexValue) => (
-        <OrderItem key={`orderItem-${product?.id}`} {...product} indexValue={indexValue} />
-      ))}
       <div className="title-container">
         <img src={arrow} alt="arrow" />
         <p className="title">My order</p>
+      </div>
+      <div className="order-container">
+        {cartItems.map((product, indexValue) => (
+          <OrderItem key={`orderItem-${indexValue}`} {...product} indexValue={indexValue} />
+        ))}
       </div>
       <div className="my-order-content">
         <div className="order">
