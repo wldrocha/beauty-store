@@ -67,6 +67,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
+.modals {
+  position: absolute;
+  top: 4rem;
+  right: 4px;
+  display: flex;
+}
 @media (max-width: 640px) {
   .menu {
     display: block;
