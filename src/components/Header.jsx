@@ -18,6 +18,10 @@ const Header = () => {
     setToggle(!toggle)
   }
 
+  const handleToggleOrders = () => {
+    setToggleOrders(!toggleOrders)
+  }
+
   return (
     <nav>
       <img src={menu} alt="menu" className="menu" />
@@ -49,14 +53,14 @@ const Header = () => {
           <li className="navbar-email" onClick={handleToggle}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toggleOrders)}>
+          <li className="navbar-shopping-cart" onClick={() => handleToggleOrders() }>
             <img src={shoppingCart} alt="shopping cart" />
             {cart.length > 0 && <div>{cart.length}</div>}
           </li>
         </ul>
       </div>
       {toggle && <Menu />}
-      {toggleOrders && <MyOrder />}
+      {toggleOrders && <MyOrder handleToggleOrders={handleToggleOrders} />}
     </nav>
   )
 }
