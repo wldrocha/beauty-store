@@ -23,7 +23,7 @@ const MyOrder = ({ handleToggleOrders }) => {
       </div>
       <div className="">
         {cartItems.map((product, indexValue) => (
-          <OrderItem key={`orderItem-${indexValue}`} {...product} indexValue={indexValue} />
+          <OrderItem key={`orderItem-${indexValue}`} {...product} />
         ))}
       </div>
       <div className="my-order-content">
