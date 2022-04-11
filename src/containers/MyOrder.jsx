@@ -16,8 +16,8 @@ const MyOrder = () => {
 
   return (
     <aside className="MyOrder">
-      {cartItems.map(product => (
-        <OrderItem key={`orderItem-${product?.id}`} {...product} />
+      {cartItems.map((product, indexValue) => (
+        <OrderItem key={`orderItem-${product?.id}`} {...product} indexValue={indexValue} />
       ))}
       <div className="title-container">
         <img src={arrow} alt="arrow" />
