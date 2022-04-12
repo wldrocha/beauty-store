@@ -6,7 +6,6 @@ import '@styles/MyOrder.scss'
 import arrow from '@icons/flechita.svg'
 
 const MyOrder = ({ handleToggleOrders }) => {
-  console.log(handleToggleOrders)
   const {
     state: { cart: cartItems },
   } = useContext(AppContext)
