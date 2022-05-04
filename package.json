@@ -1,4 +1,5 @@
 {
+  "homepage": "https://wldrocha.github.io/beauty-store/",
   "name": "beauty-store",
   "version": "1.0.0",
   "description": "react shop",
@@ -21,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/wldrocha/beauty-store/issues"
   },
-  "homepage": "https://github.com/wldrocha/beauty-store#readme",
   "dependencies": {
     "axios": "^0.26.1",
     "babel-loader": "^8.2.4",
