@@ -19,7 +19,7 @@ const App = () => {
   const initialState = useInitialState()
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter>
+      <BrowserRouter basename="https://wldrocha.github.io/beauty-store/">
         <Layout>
           <Routes>
             <Route index path="/" element={<Home />} />
