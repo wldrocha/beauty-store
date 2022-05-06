@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { MemoryRouter, Routes, Route } from 'react-router-dom'
 import Layout from '@containers/Layout'
 import Home from '@pages/Home'
 import Login from '@pages/Login'
@@ -19,7 +19,7 @@ const App = () => {
   const initialState = useInitialState()
   return (
     <AppContext.Provider value={initialState}>
-      <BrowserRouter basename="https://wldrocha.github.io/beauty-store/">
+      <MemoryRouter basename="https://wldrocha.github.io/beauty-store/">
         <Layout>
           <Routes>
             <Route index path="/" element={<Home />} />
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
-      </BrowserRouter>
+      </MemoryRouter>
     </AppContext.Provider>
   )
 }
