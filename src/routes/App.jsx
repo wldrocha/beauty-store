@@ -19,7 +19,7 @@ const App = () => {
   const initialState = useInitialState()
   return (
     <AppContext.Provider value={initialState}>
-      <MemoryRouter basename="https://wldrocha.github.io/beauty-store/">
+      <MemoryRouter >
         <Layout>
           <Routes>
             <Route index path="/" element={<Home />} />
