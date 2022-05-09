@@ -5,7 +5,7 @@ import '@styles/ProductList.scss'
 
 
 const ProductList = () => {
-  const API = 'https://api.escuelajs.co/api/v1/products?limit=10&offset=5'
+  const API = 'https://api.escuelajs.co/api/v1/products'
 
   const products = useGetProducts(API)
 
